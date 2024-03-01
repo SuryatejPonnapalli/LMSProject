@@ -8,7 +8,9 @@ const routes = createBrowserRouter(
     <Route path="/">
       <Route index element={<Home />}/>
       <Route path="fees" element={<Fees />}/>
-      <Route path="help" element={<Help />} /> 
+      <Route path="help" element={<Help />} >
+          <Route path="contact" />
+      </Route> 
     </Route>
   )
 )

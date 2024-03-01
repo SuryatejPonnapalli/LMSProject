@@ -1,13 +1,13 @@
 const Icons = ({source,heading}) => {
     return ( 
-        <div className="flex flex-col size-24 p-2 items-center justify-center rounded-3xl bg-[#432920] mx-[0.4rem] my-2">
+        <div className="flex flex-col">
             {/* Icon */}
-            <div>
+            <div className="flex items-center justify-center size-16 rounded-full bg-[#A4907B] mx-[1.4rem] my-2">
                 <img className="size-10" src={source} alt={heading} />
             </div>
             {/* Heading for Icon */}
-            <div>
-               <p className="text-[#D1C3BD]">{heading}</p> 
+            <div className="text-center">
+               <p className="text-[#283712]">{heading}</p> 
             </div>
         </div>
      );

@@ -38,7 +38,7 @@ const data1 =[{
 
 const Fees = () => {
     return ( 
-        <div className="flex flex-col items-center pt-16 space-y-4 bg-[#E7DCC9] pb-20">
+        <div className="flex flex-col items-center pt-16 space-y-4 bg-gradient-to-b from-[#C2B0A1] to-[#897765] pb-20">
             <span className="flex w-[20rem] h-12 text-center bg-white justify-center items-center rounded-2xl">
                 <h1 className="font-bold">Tuition</h1>
             </span >

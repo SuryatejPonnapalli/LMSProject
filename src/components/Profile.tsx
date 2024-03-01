@@ -1,8 +1,18 @@
 import { useState } from "react";
-import profilePic from "./assets/profilePic.jpeg"
-import feesIcon from "./assets/fees.png"
 import Icons from "./hooks/Icons";
 import {NavLink} from 'react-router-dom'
+
+// pics
+import profilePic from "./assets/profilePic.jpeg"
+import feesIcon from "./assets/fees.png"
+import helpIcon from "./assets/support.png"
+import timeTableIcon from "./assets/timetable.png"
+import attendanceIcon from "./assets/attendance.png"
+import reportIcon from "./assets/report-card.png"
+import socialIcon from "./assets/social-media.png"
+import galleryIcon from "./assets/gallery.png"
+import materialIcon from "./assets/open-book.png"
+import suggestionsIcon from "./assets/suggestion.png"
 
 const Profile = () => {
     const [extendArrow,setExtendArrow] = useState(false)
@@ -12,7 +22,7 @@ const Profile = () => {
     }
 
     return ( 
-        <div className="flex flex-col items-center rounded-[3rem] mx-4 py-6 bg-[#9A9F78]">
+        <div className="flex flex-col items-center rounded-[3rem] mx-4 py-6 bg-[#F9F4E8]">
             {/* Profile pic */}
             <div>
                 <img src={profilePic} alt="profilePic" className=" size-[4rem] rounded-full"/>
@@ -26,16 +36,18 @@ const Profile = () => {
                 <p className="text-[#5B4629]">HU22CseN0300183</p>
             </div>
             {/* Icons */}
-            <div className={`${extendArrow?"flex ease-in flex-row flex-wrap py-4 ":"hidden"}`}>
-                <NavLink to="fees"><Icons source={feesIcon} heading="Fees"/></NavLink>
-                <NavLink to="help"><Icons source={feesIcon} heading="Help"/></NavLink>
-                <Icons source={feesIcon} heading="Timetable"/>
-                <Icons source={feesIcon} heading="Attendance"/>
-                <Icons source={feesIcon} heading="Report"/>
-                <Icons source={feesIcon} heading="Social"/>
-                <Icons source={feesIcon} heading="Gallery"/>
-                <Icons source={feesIcon} heading="Material"/>
-                <Icons source={feesIcon} heading="Suggestions"/>
+            <div className={`transition-max-height duration-1000 overflow-hidden ${extendArrow ? 'ease-in' : 'ease-out'}`} style={{ maxHeight: extendArrow ? '5000px' : '0px' }}>
+                <div className={`${extendArrow?"flex ease-in flex-row flex-wrap py-4":"hidden"}`}>
+                    <NavLink to="fees"><Icons source={feesIcon} heading="Fees"/></NavLink>
+                    <NavLink to="help"><Icons source={helpIcon} heading="Help"/></NavLink>
+                    <Icons source={timeTableIcon} heading="Timetable"/>
+                    <Icons source={attendanceIcon} heading="Attendance"/>
+                    <Icons source={reportIcon} heading="Report"/>
+                    <Icons source={socialIcon} heading="Social"/>
+                    <Icons source={galleryIcon} heading="Gallery"/>
+                    <Icons source={materialIcon} heading="Material"/>
+                    <Icons source={suggestionsIcon} heading="Suggestions"/>
+                </div>
             </div>
             {/* Line/Arrow */}
             <div>

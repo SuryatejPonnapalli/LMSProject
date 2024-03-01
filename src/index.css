@@ -1,16 +1,28 @@
 @keyframes fadeIn {
-  from{
-    opacity: 0;
+  from {
+      opacity: 0;
   }
-  to{
-    opacity: 1;
+  to {
+      opacity: 1;
   }
 }
 
-.ease-in{
+.ease-in {
   animation: fadeIn 0.5s ease-in forwards;
 }
 
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+.ease-out{
+  animation: fadeOut 0.5s ease-out forwards;
+}
 
 @tailwind base;
 @tailwind components;
