@@ -9,7 +9,6 @@ const Profile = () => {
 
     const extendProfile = () => {
             setExtendArrow(prev => !prev)
-            console.log(extendArrow)
     }
 
     return ( 
@@ -28,15 +27,15 @@ const Profile = () => {
             </div>
             {/* Icons */}
             <div className={`${extendArrow?"flex ease-in flex-row flex-wrap py-4 ":"hidden"}`}>
-                <NavLink to="/fees"><Icons source={feesIcon} heading="Fees"/></NavLink>
-                <Icons source={feesIcon} heading="Chat"/>
+                <NavLink to="fees"><Icons source={feesIcon} heading="Fees"/></NavLink>
+                <NavLink to="help"><Icons source={feesIcon} heading="Help"/></NavLink>
                 <Icons source={feesIcon} heading="Timetable"/>
                 <Icons source={feesIcon} heading="Attendance"/>
                 <Icons source={feesIcon} heading="Report"/>
                 <Icons source={feesIcon} heading="Social"/>
                 <Icons source={feesIcon} heading="Gallery"/>
                 <Icons source={feesIcon} heading="Material"/>
-                <Icons source={feesIcon} heading="fees"/>
+                <Icons source={feesIcon} heading="Suggestions"/>
             </div>
             {/* Line/Arrow */}
             <div>
