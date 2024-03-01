@@ -1,4 +1,5 @@
 import Table from "./hooks/Table";
+import { NavLink } from "react-router-dom";
 
 const data =[{
     TransactionID:1234567,
@@ -48,7 +49,7 @@ const Fees = () => {
             <Table data={data1} />
             <span className="flex w-[20rem] h-12 text-center bg-white justify-center items-center rounded-2xl">
                <button>
-                    <h2 className="font-bold">Pay Now</h2>
+                    <NavLink to="/"><h2 className="font-bold">Go Back</h2></NavLink>
                 </button>
             </span>
         </div>

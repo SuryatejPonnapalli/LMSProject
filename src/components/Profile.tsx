@@ -2,7 +2,7 @@ import { useState } from "react";
 import profilePic from "./assets/profilePic.jpeg"
 import feesIcon from "./assets/fees.png"
 import Icons from "./hooks/Icons";
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 const Profile = () => {
     const [extendArrow,setExtendArrow] = useState(false)
@@ -28,7 +28,7 @@ const Profile = () => {
             </div>
             {/* Icons */}
             <div className={`${extendArrow?"flex ease-in flex-row flex-wrap py-4 ":"hidden"}`}>
-                <Link to="/fees"><Icons source={feesIcon} heading="Fees"/></Link>
+                <NavLink to="/fees"><Icons source={feesIcon} heading="Fees"/></NavLink>
                 <Icons source={feesIcon} heading="Chat"/>
                 <Icons source={feesIcon} heading="Timetable"/>
                 <Icons source={feesIcon} heading="Attendance"/>
