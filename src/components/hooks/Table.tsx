@@ -1,7 +1,15 @@
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 
-const Table = ({data}) => {
+interface TableProps {
+    data: {
+      TransactionID: number;
+      PaymentDate: string;
+      TotalFee: number;
+      Fees?: number;
+    }[];
+  }
+const Table = ({data}: TableProps) => {
 
     const columns = Object.keys(data[0]).map((key) => (
         <Column key={key} field={key} header={key} sortable/>

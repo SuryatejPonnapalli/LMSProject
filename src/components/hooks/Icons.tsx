@@ -1,4 +1,9 @@
-const Icons = ({source,heading}) => {
+interface IconsProps {
+    source: string;
+    heading: string;
+  }
+  
+  const Icons = ({source,heading}: IconsProps) => {
     return ( 
         <div className="flex flex-col">
             {/* Icon */}
