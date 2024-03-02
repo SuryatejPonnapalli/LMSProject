@@ -1,14 +1,18 @@
 import Profile from "./Profile";
 
-const Home = (props: any) => {
+interface HomeProps {
+  extendArrow: boolean;
+  extendProfile: () => void;
+}
+
+const Home = ({ extendArrow, extendProfile }: HomeProps ) => {
   return (
     <main className="pt-16 bg-gradient-to-b from-[#C2B0A1] to-[#897765]">
       <Profile
-        extendArrow={props.extendArrow}
-        extendProfile={props.extendProfile}
+        extendArrow={extendArrow}
+        extendProfile={extendProfile}
       />
     </main>
   );
 };
-
-export default Home;
+export default Home

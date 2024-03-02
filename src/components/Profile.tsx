@@ -13,7 +13,12 @@ import galleryIcon from "./assets/gallery.png";
 import materialIcon from "./assets/open-book.png";
 import profileIcon from "./assets/suggestion.png";
 
-const Profile = (props: any) => {
+type ProfileProps = {
+  extendArrow: boolean;
+  extendProfile: () => void;
+};
+
+const Profile = ({ extendArrow, extendProfile }: ProfileProps) => {
   return (
     <div className="flex flex-col items-center rounded-[3rem] mx-4 py-6 bg-[#F9F4E8]">
       <div>
@@ -31,13 +36,13 @@ const Profile = (props: any) => {
       </div>
       <div
         className={`transition-max-height duration-1000 overflow-hidden ${
-          props.extendArrow ? "ease-in" : "ease-out"
+          extendArrow ? "ease-in" : "ease-out"
         }`}
-        style={{ maxHeight: props.extendArrow ? "5000px" : "0px" }}
+        style={{ maxHeight: extendArrow ? "5000px" : "0px" }}
       >
         <div
           className={`${
-            props.extendArrow
+            extendArrow
               ? "flex ease-in flex-row flex-wrap py-4 items-center justify-center"
               : "hidden"
           }`}
@@ -73,8 +78,8 @@ const Profile = (props: any) => {
       </div>
 
       <div>
-        <button onClick={props.extendProfile}>
-          {props.extendArrow ? (
+        <button onClick={extendProfile}>
+          {extendArrow ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
